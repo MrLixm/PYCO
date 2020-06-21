@@ -1,0 +1,29 @@
+:root {
+  /*  !* Default color shades *!*/
+  /*--md-default-fg-color:               rgb(57, 217, 147);*/
+  /*--md-default-fg-color--light:        rgb(57, 217, 147);*/
+  /*--md-default-fg-color--lighter:      rgb(57, 217, 147);*/
+  /*--md-default-fg-color--lightest:     rgb(57, 217, 147);*/
+  /*--md-default-bg-color:               rgb(57, 217, 147);*/
+  /*--md-default-bg-color--light:        rgb(57, 217, 147);*/
+  /*--md-default-bg-color--lighter:      rgb(57, 217, 147);*/
+  /*--md-default-bg-color--lightest:     rgb(57, 217, 147);*/
+
+    /* Primary color shades */
+  --md-primary-fg-color:               rgb(57, 217, 147);
+  --md-primary-fg-color--light:        rgb(97, 225, 160);
+  --md-primary-fg-color--dark:         rgb(63, 174, 118);
+  /*--md-primary-bg-color:               rgb(57, 217, 147);*/
+  /*--md-primary-bg-color--light:        rgb(57, 217, 147);*/
+
+  /*   !* Accent color shades *!*/
+  /*--md-accent-fg-color:                rgb(57, 217, 147);*/
+  /*--md-accent-fg-color--transparent:   rgb(57, 217, 147);*/
+  /*--md-accent-bg-color:                rgb(57, 217, 147);*/
+  /*--md-accent-bg-color--light:         rgb(57, 217, 147);*/
+
+  /*!* Code block color shades *!*/
+  /*--md-code-bg-color:                  rgb(57, 217, 147);*/
+  /*--md-code-fg-color:                  rgb(57, 217, 147);*/
+
+}

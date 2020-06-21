@@ -1,0 +1,51 @@
+
+# Project information
+site_name: PYCO Documentation
+#site_url: https://squidfunk.github.io/mkdocs-material/
+site_author: Collod Liam
+site_description: >-
+  Home of the documentation for PYCO applications. PYCO apps target a VFX-CGI public and help them create
+  and work faster. This go from the in-app python script to the standalone app.
+
+# Copyright
+copyright: Copyright &copy; 2020 - 2020 Collod-Liam
+
+
+theme:
+  name: material
+  features: -tabs
+  language: en
+  palette:
+    scheme: preference
+#    primary: indigo
+#    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: img/PYCO_logo_white.svg
+  favicon: img/favicon.png
+
+nav:
+    - Home: index.md
+    - Standalone:
+      - Colorspace:
+          - About: standalone/cs_about.md
+          - Getting started: standalone/cs_start.md
+      - Test:
+          - Getting started
+    - Maya:
+        - Udim Select: maya/m_udimselect_start.md
+    - About:
+      - about.md
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences
+  - toc:
+      permalink: true

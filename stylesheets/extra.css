@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/JetBrainsMono-Medium.ttf");
+}
+
 :root {
   /*  !* Default color shades *!*/
   /*--md-default-fg-color:               rgb(57, 217, 147);*/
@@ -10,7 +15,7 @@
   /*--md-default-bg-color--lightest:     rgb(57, 217, 147);*/
 
     /* Primary color shades */
-  --md-primary-fg-color:               rgb(57, 217, 147);
+  --md-primary-fg-color: rgb(57, 217, 147);
   --md-primary-fg-color--light:        rgb(97, 225, 160);
   --md-primary-fg-color--dark:         rgb(63, 174, 118);
   /*--md-primary-bg-color:               rgb(57, 217, 147);*/
@@ -27,3 +32,48 @@
   /*--md-code-fg-color:                  rgb(57, 217, 147);*/
 
 }
+
+p{
+  font-size: 16px;
+}
+
+h2{
+  color: rgb(97, 225, 160);
+}
+
+/*h1{*/
+/*  background-color: #5863F8;*/
+/*  padding-left: 10px;*/
+/*  padding-bottom: 3px;*/
+/*  border-radius: 6px;*/
+/*}*/
+
+h1{
+  background: linear-gradient(90deg, rgba(88,99,248,1) 0%, rgba(57,217,147,0) 100%);
+  border-top: 3px solid #5863F8;
+  padding: 15px;
+}
+
+.md-header{
+  height: 60px;
+  background-color: rgb(49, 216, 144);
+  border-top: 3px solid #5863F8;
+}
+.md-header-nav__topic{
+  text-shadow: rgba(10,10,10,0.25) 1px 0 10px;
+  font-size: 25px;
+  /*font-weight: bold;*/
+  font-family: "JetBrains Mono";
+}
+
+.md-tabs{
+  background: linear-gradient(90deg, rgba(88,99,248,1) 0%, rgba(57,217,147,1) 100%);
+}
+
+.md-content{
+  border-left: 2px solid #434755;
+  margin-bottom: 8px;
+}
+
+/*  background: linear-gradient(90deg, rgba(88,99,248,1) 0%, rgba(88,99,248,1) 3%, rgba(255,200,87,1) 3%,*/
+/*rgba(255,200,87,1) 6%, rgba(209,73,91,1) 6%, rgba(209,73,91,1) 9%, rgba(57,217,147,1) 9%, rgba(57,217,147,1) 82%);*/

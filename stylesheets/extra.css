@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "JetBrains Mono";
   src: url("/assets/JetBrainsMono-Medium.ttf");
@@ -51,7 +52,8 @@ h2{
 h1{
   background: linear-gradient(90deg, rgba(88,99,248,1) 0%, rgba(57,217,147,0) 100%);
   border-top: 3px solid #5863F8;
-  padding: 15px;
+  padding: 8px;
+  padding-left: 15px;
 }
 
 .md-header{
@@ -63,7 +65,7 @@ h1{
   text-shadow: rgba(10,10,10,0.25) 1px 0 10px;
   font-size: 25px;
   /*font-weight: bold;*/
-  font-family: "JetBrains Mono";
+  /*font-family: "JetBrains Mono";*/
 }
 
 .md-tabs{

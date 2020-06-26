@@ -62,7 +62,7 @@ h3{
 
 .md-header{
   height: 60px;
-  background: linear-gradient(90deg, rgba(25,158,112,1) 0%, rgba(49,216,144,1) 41%, rgba(49,216,144,1) 100%);
+  background: linear-gradient(90deg, rgba(16,231,139,1) 0%, rgba(49,216,144,1) 100%)
   /*border-top: 3px solid #5863F8;*/
 }
 .md-header-nav__topic{
@@ -74,6 +74,7 @@ h3{
 
 .md-tabs{
   background: linear-gradient(90deg, rgba(88,99,248,1) 0%, rgba(57,217,147,1) 100%);
+  border: 2px solid rgba(180,180,200, 0.1)
 }
 
 .md-content{

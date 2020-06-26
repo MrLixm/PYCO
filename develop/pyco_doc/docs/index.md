@@ -1,17 +1,6 @@
-# Welcome to PYCO Documentation
+#  :material-home-circle-outline: Welcome to PYCO Documentation
 
-This is the online documentation for PYCO Apps
+This is the online documentation for all PYCO Apps
 
-## Commands
+![PYCO](img/script_pyco_visu_banner_trans_v02.png)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.

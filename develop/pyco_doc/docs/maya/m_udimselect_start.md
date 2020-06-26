@@ -1,3 +1,0 @@
-# GETTING STARTED
-
-Blank

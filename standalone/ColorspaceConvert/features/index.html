@@ -547,6 +547,7 @@
 <li>.jpeg</li>
 <li>.tiff</li>
 <li>.hdr</li>
+<li>.tx</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -595,6 +596,11 @@
 <p class="admonition-title">Danger</p>
 <p>All outputs are cropped to RGBA (if alpha supported) channels.</p>
 <p>So if you input multi-channel exrs and output exrs, you will lose all your other channels.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Mipmapping is not supported for output. </p>
+<p>You can input mipmapped exr/tiff/tx but the output will loose its mipmapping.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Compression</p>

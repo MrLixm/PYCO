@@ -12,9 +12,10 @@
     - .jpeg
     - .tiff
     - .hdr
+    - .tx
     
     !!! warning
-        Single-channel exrs are not supported.
+        Single-channel maps are not supported.
 
 !!! success ""
     
@@ -40,6 +41,13 @@
     All outputs are cropped to RGBA (if alpha supported) channels.
      
     So if you input multi-channel exrs and output exrs, you will lose all your other channels.
+    
+!!! danger
+
+    Mipmapping is not supported for output. 
+    
+    You can input mipmapped exr/tiff/tx but the output will loose its mipmapping.
+
 
 !!! warning "Compression"
     
@@ -51,15 +59,13 @@
     
 ## :material-image-search: IDT
 
-IDTs allow to specify to which colorspace your file primaries belongs too but also which transfer-function is applied.
+IDTs allow to specify to which colorspace your file primaries belongs too but also which transfer-function is applied
+to your file.
 
-!!! info "Conversion"
+- **Utility - Raw** : specify that you don't want any conversion. It can be usefull if you just want to switch the 
+format of a file.
 
-    If the Input colorspace is the same as the Output one, no conversion at all will happens. 
-    
-    So it doesn't matter your orignal file primaries, if you just want to switch file format for example you can just 
-    use the same colorspace for IDT and Target Cs.*(ex: IDT: sRGB-Lin ; OutCs: sRGB/rec709)* 
-
+- **Utility - Texture - rec709** : if your file has sRGB/rec709 primaries with a gamma2.2 transfer function applied.
 
 ​    
 ## :material-chart-bell-curve-cumulative: ODT/Transfer Functions

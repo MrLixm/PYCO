@@ -1,7 +1,7 @@
 
 # Project information
 site_name: PYCO Documentation
-#site_url: https://squidfunk.github.io/mkdocs-material/
+site_url: https://mrlixm.github.io/PYCO/
 site_author: Collod Liam
 site_description: >-
   Home of the documentation for PYCO applications. PYCO apps target a VFX-CGI public and help them create
@@ -35,11 +35,13 @@ nav:
           - Home: standalone/ColorspaceConvert/home.md
           - Getting started: standalone/ColorspaceConvert/startguide.md
           - Features : standalone/ColorspaceConvert/features.md
+          - Development : standalone/ColorspaceConvert/development.md
     - Maya:
         - Udim Select: maya/udimselect.md
     - About: about.md
 
 extra:
+  disqus: pyco-apps
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/MrLixm
@@ -53,6 +55,7 @@ extra_css:
 
 markdown_extensions:
   - admonition
+  - meta
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.emoji:

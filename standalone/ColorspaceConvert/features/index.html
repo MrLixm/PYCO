@@ -11,6 +11,8 @@
         <meta name="description" content="Home of the documentation for PYCO applications. PYCO apps target a VFX-CGI public and help them create and work faster. This go from the in-app python script to the standalone app.">
       
       
+        <link rel="canonical" href="https://mrlixm.github.io/PYCO/standalone/ColorspaceConvert/features/">
+      
       
         <meta name="author" content="Collod Liam">
       
@@ -71,7 +73,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../../.." title="PYCO Documentation" class="md-header-nav__button md-logo" aria-label="PYCO Documentation">
+    <a href="https://mrlixm.github.io/PYCO/" title="PYCO Documentation" class="md-header-nav__button md-logo" aria-label="PYCO Documentation">
       
   <img src="../../../img/PYCO_logo_white.svg" alt="logo">
 
@@ -200,7 +202,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="PYCO Documentation" class="md-nav__button md-logo" aria-label="PYCO Documentation">
+    <a href="https://mrlixm.github.io/PYCO/" title="PYCO Documentation" class="md-nav__button md-logo" aria-label="PYCO Documentation">
       
   <img src="../../../img/PYCO_logo_white.svg" alt="logo">
 
@@ -563,7 +565,7 @@
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Single-channel exrs are not supported.</p>
+<p>Single-channel maps are not supported.</p>
 </div>
 </div>
 <div class="admonition success">
@@ -624,13 +626,17 @@ for exrs.</p>
 <p>When drag&amp;dropping a folder, all the files inside it and its sub-directories will be added!</p>
 </div>
 <h2 id="idt"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 2C18 2 20 4 20 6.5c0 .88-.25 1.71-.69 2.4l3.08 3.1L21 13.39l-3.12-3.07c-.69.43-1.51.68-2.38.68C13 11 11 9 11 6.5S13 2 15.5 2m0 2A2.5 2.5 0 0013 6.5 2.5 2.5 0 0015.5 9 2.5 2.5 0 0018 6.5 2.5 2.5 0 0015.5 4m-8 10.5L4 19h14l-4.5-6-3.5 4.5-2.5-3M20 20a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h5.5c-.32.77-.5 1.61-.5 2.5a6.5 6.5 0 006.5 6.5c.68 0 1.34-.11 1.96-.3L20 15.24V20z"/></svg></span> IDT<a class="headerlink" href="#idt" title="Permanent link">&para;</a></h2>
-<p>IDTs allow to specify to which colorspace your file primaries belongs too but also which transfer-function is applied.</p>
-<div class="admonition info">
-<p class="admonition-title">Conversion</p>
-<p>If the Input colorspace is the same as the Output one, no conversion at all will happens. </p>
-<p>So it doesn't matter your orignal file primaries, if you just want to switch file format for example you can just 
-use the same colorspace for IDT and Target Cs.<em>(ex: IDT: sRGB-Lin ; OutCs: sRGB/rec709)</em> </p>
-</div>
+<p>IDTs allow to specify to which colorspace your file primaries belongs too but also which transfer-function is applied
+to your file.</p>
+<ul>
+<li>
+<p><strong>Utility - Raw</strong> : specify that you don't want any conversion. It can be usefull if you just want to switch the 
+format of a file.</p>
+</li>
+<li>
+<p><strong>Utility - Texture - rec709</strong> : if your file has sRGB/rec709 primaries with a gamma2.2 transfer function applied.</p>
+</li>
+</ul>
 <p>​    </p>
 <h2 id="odttransfer-functions"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 19v1h18v2H2V2h2v15c3 0 6-2 8.1-5.6 3-5 6.3-7.4 9.9-7.4v2c-2.8 0-5.5 2.1-8.1 6.5C11.3 16.6 7.7 19 4 19z"/></svg></span> ODT/Transfer Functions<a class="headerlink" href="#odttransfer-functions" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
@@ -659,6 +665,10 @@ You can also open it by clicking on the "log" Icon in the UI.</p>
               
                 
 
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>var disqus_config=function(){this.page.url="https://mrlixm.github.io/PYCO/standalone/ColorspaceConvert/features/",this.page.identifier="standalone/ColorspaceConvert/features/"};!function(){var e=document,i=e.createElement("script");i.src="//pyco-apps.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
 
               
             </article>

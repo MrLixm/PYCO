@@ -416,13 +416,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#command-list" class="md-nav__link">
-     Command list
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#execute-commands-tutorial" class="md-nav__link">
      Execute commands Tutorial
   </a>
@@ -440,6 +433,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../features/" title="Features" class="md-nav__link">
+      Features
+    </a>
   </li>
 
         
@@ -540,13 +545,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#command-list" class="md-nav__link">
-     Command list
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#execute-commands-tutorial" class="md-nav__link">
      Execute commands Tutorial
   </a>
@@ -578,26 +576,6 @@
                 
                 <h1 id="start-guide"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 2l-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5z"/></svg></span> START GUIDE<a class="headerlink" href="#start-guide" title="Permanent link">&para;</a></h1>
 <h2 id="installation"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0110 10 10 10 0 01-10 10A10 10 0 012 12 10 10 0 0112 2m0 15l5-5h-3V8h-4v4H7l5 5z"/></svg></span> Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<h2 id="command-list"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> Command list<a class="headerlink" href="#command-list" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/pointerGamutCLI.exe&quot;</span> INPUT_FILE_PATH OUTPUT_FILE_PATH <span class="o">[</span>Options<span class="o">]</span>
-</code></pre></div>
-INPUT_FILE_PATH is the path to file to generate the map from</p>
-<p>OUTPUT_FILE_PATH is the path (with the filename.ext) to the map that is going to be generated</p>
-<p>Options:</p>
-<ul>
-<li>
-<p><code>--colorspace</code> colorspace of the file</p>
-</li>
-<li>
-<p><code>--linearize</code> linearized the input based on the colorspace precised</p>
-</li>
-<li>
-<p><code>--out_map_type</code> Choose the type of map to output (heat, add)[default=heat]</p>
-</li>
-<li>
-<p><code>--tolerance</code> How far from the pointer gamut you authorize the pixel values to be.[default=0] ex: 0.1</p>
-</li>
-</ul>
 <h2 id="execute-commands-tutorial"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 01-2 2h-2v2h4v2H9v-4a2 2 0 012-2h2V9H9V7h4a2 2 0 012 2m4-6H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> Execute commands Tutorial<a class="headerlink" href="#execute-commands-tutorial" title="Permanent link">&para;</a></h2>
 <p>This application is Command Line based, it means that if you try to open the .exe, nothing will happens.
 You need to execute the app with commands.</p>
@@ -609,7 +587,7 @@ You need to execute the app with commands.</p>
 <p>First you need to get the path to the .exe so go where you saved the app, shift+rightclick on it -&gt; copy as path</p>
 </li>
 <li>
-<p>Go back in the command prompt, paste the path (<span class="keys"><kbd class="key-shift">Shift</kbd></span> + inser)(the path must start and end with "")</p>
+<p>Go back in the command prompt, paste the path (shift+inser)(the path must start and end with <code>""</code>)</p>
 </li>
 <li>
 <p>Now enter the path of the outpute file (with also the name.ext)(put a space between the 2 path) </p>
@@ -631,15 +609,15 @@ You need to execute the app with commands.</p>
 </div>
 <ul>
 <li>
-<p>If your file is not linear add <code>--linearize</code> that will linearize your file base don the colorspace precised.</p>
+<p>If your file is not linear add <code>--linearize</code> that will linearize your file based on the colorspace precised.</p>
 </li>
 <li>
 <p>You can precise the tolerance amount you want by adding <code>--tolerance=yourNumber</code> which is by default 0</p>
 </li>
 </ul>
 <h2 id="exemple-of-command">Exemple of command:<a class="headerlink" href="#exemple-of-command" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;./script/pointerGamutCLI.exe&quot;</span> <span class="s2">&quot;L:\SCRIPT\Colour\PointerGamut\test\megascans\td3nedtla_4K_Albedo.exr&quot;</span>
- <span class="s2">&quot;L:\SCRIPT\Colour\PointerGamut\test\megascans\CLI_apple_01.jpg&quot;</span> --colorspace<span class="o">=</span><span class="s1">&#39;sRGB&#39;</span> 
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;./script/pointerGamutCLI.exe&quot;</span> <span class="s2">&quot;L:\megascans\td3nedtla_4K_Albedo.exr&quot;</span>
+ <span class="s2">&quot;L:\megascans\CLI_apple_01.jpg&quot;</span> --colorspace<span class="o">=</span>sRGB
 </code></pre></div>
                 
               
@@ -678,13 +656,13 @@ You need to execute the app with commands.</p>
           </a>
         
         
-          <a href="../../../maya/udimselect/" title="Udim Select" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../features/" title="Features" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Udim Select
+                Features
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

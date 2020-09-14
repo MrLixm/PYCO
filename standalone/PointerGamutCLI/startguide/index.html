@@ -416,8 +416,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#execute-commands-tutorial" class="md-nav__link">
-     Execute commands Tutorial
+  <a href="#tutorial-create-a-pointers-gamut-heat-map-for-an-image" class="md-nav__link">
+     Tutorial: create a Pointer's Gamut heat map for an image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layer-exr" class="md-nav__link">
+     Tutorial: create a Pointer's Gamut heat map from a multi-layer exr
   </a>
   
 </li>
@@ -545,8 +552,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#execute-commands-tutorial" class="md-nav__link">
-     Execute commands Tutorial
+  <a href="#tutorial-create-a-pointers-gamut-heat-map-for-an-image" class="md-nav__link">
+     Tutorial: create a Pointer's Gamut heat map for an image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layer-exr" class="md-nav__link">
+     Tutorial: create a Pointer's Gamut heat map from a multi-layer exr
   </a>
   
 </li>
@@ -576,13 +590,13 @@
                 
                 <h1 id="start-guide"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 2l-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5z"/></svg></span> START GUIDE<a class="headerlink" href="#start-guide" title="Permanent link">&para;</a></h1>
 <h2 id="installation"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0110 10 10 10 0 01-10 10A10 10 0 012 12 10 10 0 0112 2m0 15l5-5h-3V8h-4v4H7l5 5z"/></svg></span> Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>Just unzip the file you downloaded and put the .exe anywhere you want</p>
-<h2 id="execute-commands-tutorial"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 01-2 2h-2v2h4v2H9v-4a2 2 0 012-2h2V9H9V7h4a2 2 0 012 2m4-6H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> Execute commands Tutorial<a class="headerlink" href="#execute-commands-tutorial" title="Permanent link">&para;</a></h2>
-<p>This application is Command Line based, it means that if you try to open the .exe, nothing will happens.
+<p>Just unzip the file you downloaded and put the .exe anywhere you want.</p>
+<h2 id="tutorial-create-a-pointers-gamut-heat-map-for-an-image"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> Tutorial: create a Pointer's Gamut heat map for an image<a class="headerlink" href="#tutorial-create-a-pointers-gamut-heat-map-for-an-image" title="Permanent link">&para;</a></h2>
+<p>This application is Command Line based, it means if you try to just open the .exe, nothing will happens.
 You need to execute the app from a command prompt by calling commands.</p>
 <ul>
 <li>
-<p>For that open the windows command prompt (win+r type <em>cmd</em> and hits enter)</p>
+<p>Open the Windows command prompt (win+r type <em>cmd</em> and hits enter)</p>
 </li>
 <li>
 <p>First you need to get the path to the .exe so go where you saved the app, shift+rightclick on it -&gt; copy as path</p>
@@ -590,11 +604,27 @@ You need to execute the app from a command prompt by calling commands.</p>
 <li>
 <p>Go back in the command prompt, paste the path (shift+inser)(the path must start and end with <code>""</code>)</p>
 </li>
-<li>
-<p>Now enter the path of the outpute file (with also the name.ext)(put a space between the 2 path) </p>
-</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\tests\texture_pgmap.jpg&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>Enter the command you want to use , in this case <code>createpgmap</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe createpgmap&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>Get the path of the image you want to analyze, and paste it after the path of the executable
+ (as always with a space in between)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> createpgmap <span class="s2">&quot;L:\texture\randomTexture.exr&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>Now enter the path of the output file (with also the name.ext)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> createpgmap <span class="s2">&quot;L:\texture\randomTexture.exr&quot;</span> <span class="s2">&quot;L:\texture\texture_pgmap.jpg&quot;</span>
 </code></pre></div>
 
 <ul>
@@ -602,23 +632,73 @@ You need to execute the app from a command prompt by calling commands.</p>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>This argument should precise the colorspace of your file so enter the one corresponding to your file colorspace.</p>
-<p>Exemple of colorspace available:</p>
+<p>This argument should precises the colorspace of your file.</p>
+<p>Examples of colorspaces available:</p>
 <ul>
 <li>ACEScg, sRGB, BT709, ADOBE_WIDE_GAMUT, ADOBE_RGB_1998, ACES_2065_1</li>
 </ul>
 </div>
 <ul>
+<li>If your file is not linear add <code>--linearize</code> that will linearize your file based on the colorspace precised.</li>
+</ul>
+<div class="admonition info">
+<p>Please refer to the <strong>features</strong> page where this option is explained in detail.</p>
+<p>You can just assume: use this option for jpg/png/... , don't use it for .exr/...</p>
+</div>
+<ul>
+<li>You can precise the tolerance amount you want by adding <code>--tolerance=yourNumber</code> which is by default 0.</li>
+</ul>
+<div class="admonition info">
+<p>The range of this parameters is 0-1, but keep it very low. Something like is 0.08 is a good value if you want 
+some margin.</p>
+</div>
+<h2 id="tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layer-exr"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 01-2 2h-2v2h4v2H9v-4a2 2 0 012-2h2V9H9V7h4a2 2 0 012 2m4-6H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> Tutorial: create a Pointer's Gamut heat map from a multi-layer exr<a class="headerlink" href="#tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layer-exr" title="Permanent link">&para;</a></h2>
+<p>Let's say that this time you have a multi-layer exr of one of your render and you would like to analyze the 
+"albedo" AOV that it holds:</p>
+<p>(We skip some steps as they are explained above.)</p>
+<ul>
 <li>
-<p>If your file is not linear add <code>--linearize</code> that will linearize your file based on the colorspace precised.</p>
+<p>This time instead of createpgmap we are going to use <code>querylayers</code> that will allow us to display all the channels of 
+all the layers that your exr has. (in case you don't know how your aov is called)</p>
 </li>
 <li>
-<p>You can precise the tolerance amount you want by adding <code>--tolerance=yourNumber</code> which is by default 0</p>
+<p>Just after add the path to the render</p>
 </li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> querylayers <span class="s2">&quot;L:\render\randomRender.exr&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>Hit enter and you will see all the layers displayed (each layer is prefixed by its channel)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example with a render from Redshift</span>
+
+<span class="o">(</span><span class="s1">&#39;R&#39;</span>, <span class="s1">&#39;G&#39;</span>, <span class="s1">&#39;B&#39;</span>, <span class="s1">&#39;A&#39;</span>, <span class="s1">&#39;Z&#39;</span>, <span class="s1">&#39;DiffuseFilter.R&#39;</span>, <span class="s1">&#39;DiffuseFilter.G&#39;</span>, <span class="s1">&#39;DiffuseFilter.B&#39;</span>, 
+<span class="s1">&#39;Emission.R&#39;</span>, <span class="s1">&#39;Emission.G&#39;</span>, <span class="s1">&#39;Emission.B&#39;</span>, <span class="s1">&#39;GIRaw.R&#39;</span>, <span class="s1">&#39;GIRaw.G&#39;</span>, <span class="s1">&#39;GIRaw.B&#39;</span>, 
+<span class="s1">&#39;SpecularLighting.R&#39;</span>, <span class="s1">&#39;SpecularLighting.G&#39;</span>, <span class="s1">&#39;SpecularLighting.B&#39;</span>, <span class="s1">&#39;VolumeF</span>
+<span class="s1">ogEmission.R&#39;</span>, <span class="s1">&#39;VolumeFogEmission.G&#39;</span><span class="o">)</span>
+</code></pre></div>
+
+<p>So now you can pick the name of the channel you want to analyze (for the Pointer's Gamut we are only interested in 
+the albedo AOV which is called DiffuseFilter by Redshift)</p>
+<ul>
+<li>Now we can do the same steps as the first part of the tutorial, let's add the <code>createpgmap</code> command 
+, the input_file_path, the output_file_path and the colorspace .</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> createpgmap <span class="s2">&quot;L:\render\randomRender.exr&quot;</span> <span class="s2">&quot;L:\render\renderX_pgmap.jpg&quot;</span> --colorspace<span class="o">=</span>ACEScg  
+</code></pre></div>
+
+<ul>
+<li>The only difference is this time, add the <code>--layer</code> option with, as value, the name of your albedo aov that we pick before.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> createpgmap <span class="s2">&quot;L:\render\randomRender.exr&quot;</span> <span class="s2">&quot;L:\render\renderX_pgmap.jpg&quot;</span> --colorspace<span class="o">=</span>ACEScg --layer<span class="o">=</span>DiffuseFilter 
+</code></pre></div>
+
+<ul>
+<li>Hit enter and you got your map</li>
+</ul>
 <h2 id="exemple-of-command">Exemple of command:<a class="headerlink" href="#exemple-of-command" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;./script/pointerGamutCLI.exe&quot;</span> <span class="s2">&quot;L:\megascans\td3nedtla_4K_Albedo.exr&quot;</span>
- <span class="s2">&quot;L:\megascans\CLI_apple_01.jpg&quot;</span> --colorspace<span class="o">=</span>sRGB
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;./script/pointerGamutCLI.exe&quot;</span> createpgmap <span class="s2">&quot;L:\megascans\td3nedtla_4K_Albedo.exr&quot;</span> <span class="s2">&quot;L:\megascans\CLI_apple_01.jpg&quot;</span> --colorspace<span class="o">=</span>sRGB --tolerance<span class="o">=</span><span class="m">0</span>.1 --out_map_type<span class="o">=</span>add  
 </code></pre></div>
                 
               

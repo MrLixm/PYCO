@@ -429,8 +429,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
-    Options:
+  <a href="#createpgmap-command" class="md-nav__link">
+     createpgmap command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querylayers-command" class="md-nav__link">
+     querylayers command
   </a>
   
 </li>
@@ -552,8 +559,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
-    Options:
+  <a href="#createpgmap-command" class="md-nav__link">
+     createpgmap command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#querylayers-command" class="md-nav__link">
+     querylayers command
   </a>
   
 </li>
@@ -587,37 +601,69 @@
                 
                 
                 <h1 id="features"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2a2 2 0 00-2 2v10h2V4h10V2H4m4 4a2 2 0 00-2 2v10h2V8h10V6H8m12 6v8h-8v-8h8m0-2h-8a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-8a2 2 0 00-2-2m-1 7h-6v-2h6v2z"/></svg></span> Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h1>
-<h2 id="command-list"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> Command list<a class="headerlink" href="#command-list" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/pointerGamutCLI.exe&quot;</span> INPUT_FILE_PATH OUTPUT_FILE_PATH <span class="o">[</span>Options<span class="o">]</span>
+<p>Structure:
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/pointerGamutCLI.exe&quot;</span> <span class="nb">command</span> arguments <span class="o">[</span>Options<span class="o">]</span>
+</code></pre></div></p>
+<h2 id="command-list"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5v14h17V5H3m4 2v2H5V7h2m-2 6v-2h2v2H5m0 2h2v2H5v-2m13 2H9v-2h9v2m0-4H9v-2h9v2m0-4H9V7h9v2z"/></svg></span> Command list<a class="headerlink" href="#command-list" title="Permanent link">&para;</a></h2>
+<h3 id="createpgmap-command"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> createpgmap command<a class="headerlink" href="#createpgmap-command" title="Permanent link">&para;</a></h3>
+<p>Create a map that show out of PG pixels as explain in the Home page.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/pointerGamutCLI.exe&quot;</span> createpgmap INPUT_FILE_PATH OUTPUT_FILE_PATH <span class="o">[</span>Options<span class="o">]</span>
 </code></pre></div>
-INPUT_FILE_PATH is the path to file to generate the map from</p>
-<p>OUTPUT_FILE_PATH is the path (with the filename.ext) to the map that is going to be generated</p>
-<h3 id="options">Options:<a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
+
+<p><strong>Arguments:</strong></p>
+<p>INPUT_FILE_PATH is the path to the image to generate the map from</p>
+<p>OUTPUT_FILE_PATH is the desired path (with the filename.ext) to the map that is going to be generated</p>
+<p><strong>Options:</strong></p>
 <ul>
 <li><code>--colorspace=string</code> colorspace of the file</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This argument should precise the colorspace of your file so enter the one corresponding to your file colorspace.</p>
-<p>Exemple of colorspace available:</p>
+<p>This argument should precises the colorspace of your file.</p>
+<p>Examples of colorspaces available:</p>
 <ul>
 <li>ACEScg, sRGB, BT709, ADOBE_WIDE_GAMUT, ADOBE_RGB_1998, ACES_2065_1</li>
 </ul>
 </div>
 <ul>
-<li>
-<p><code>--linearize</code> linearized the input based on the colorspace precised</p>
-</li>
-<li>
-<p><code>--out_map_type=string</code> Choose the type of map to output (heat, add)[default=heat]</p>
-</li>
-<li>
-<p><code>--tolerance=number</code> How far from the pointer gamut you authorize the pixel values to be.[default=0] ex: 0.1</p>
-</li>
+<li><code>--linearize</code> linearized the input based on the colorspace precised. </li>
 </ul>
+<div class="admonition info">
+<p><strong>The tool awaits for linear data</strong>, if you input an image with a transfer function applied, the linearize option 
+will invert this transfer function to get linear data (the transfer function is determined by the colorspace
+argument you submitted).
+This is an internal operation that <strong>doesn't affect the original file</strong>.</p>
+<p>For example if you input a .jpg/.png you should use this option.</p>
+</div>
+<ul>
+<li><code>--out_map_type=string</code> Choose the type of map to output (heat, add) </li>
+</ul>
+<div class="admonition info">
+<p><em>[default=heat]</em></p>
+<p><strong>Heat</strong> will output a black map with pixels gamut that are not in the PG with a red color</p>
+<p><strong>Add</strong> will just adds the above map onto the original file (that has been multiplied by 0.65 so this is 
+normal if it looks darker) </p>
+</div>
+<ul>
+<li><code>--tolerance=number</code> How far from the pointer gamut you authorize the pixel values to be. </li>
+</ul>
+<div class="admonition info">
+<p><em>[default=0]</em></p>
+<p>The range of this parameters is 0-1, but keep it very low. Something like is 0.08 is a good value if you want 
+some margin.</p>
+</div>
+<ul>
+<li><code>--help</code> display the help</li>
+</ul>
+<h3 id="querylayers-command"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 01-2 2h-2v2h4v2H9v-4a2 2 0 012-2h2V9H9V7h4a2 2 0 012 2m4-6H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> querylayers command<a class="headerlink" href="#querylayers-command" title="Permanent link">&para;</a></h3>
+<p>Display all the layers name in the file (useful for multi-layers exr)</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/pointerGamutCLI.exe&quot;</span> querylayers FILE_PATH
+</code></pre></div>
+
+<p><strong>Arguments:</strong></p>
+<p>FILE_PATH is the path of the file to query info from</p>
 <h2 id="inputs-and-outputs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 3h4V0l5 5-5 5V7h-4V3m6 8.94V19a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h7.06c-.06.33-.06.67-.06 1a8 8 0 008 8c.33 0 .67 0 1-.06M19 18l-4.5-6-3.5 4.5-2.5-3L5 18h14z"/></svg></span> Inputs and Outputs<a class="headerlink" href="#inputs-and-outputs" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
-<p><strong>List of Input formats supported</strong>  </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 12l-4-4v3H2v2h8v3m10 2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v3h2V6h12v12H6v-3H4v3a2 2 0 002 2h12a2 2 0 002-2z"/></svg></span> <strong>List of Input formats supported</strong>  </p>
 <ul>
 <li>.exr</li>
 <li>.png</li>
@@ -633,13 +679,8 @@ INPUT_FILE_PATH is the path to file to generate the map from</p>
 </div>
 </div>
 <div class="admonition success">
-<p><strong>Output</strong></p>
-<p>This app has been made to output 8bit int jpg, trying to output an other format might not work.</p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>All outputs are cropped to RGB channels.</p>
-<p>So if you input multi-channel exrs only the RGB channels will be processed.</p>
-</div>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 12l-4-4v3h-9v2h9v3M1 18V6a2 2 0 012-2h12a2 2 0 012 2v3h-2V6H3v12h12v-3h2v3a2 2 0 01-2 2H3a2 2 0 01-2-2z"/></svg></span> <strong>Output</strong></p>
+<p>This app has been made to output 8bit int jpg, trying to output an other format is possible but might not work.</p>
 </div>
                 
               

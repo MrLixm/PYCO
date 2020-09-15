@@ -613,16 +613,19 @@
 <p><strong>Arguments:</strong></p>
 <p>INPUT_FILE_PATH is the path to the image to generate the map from</p>
 <p>OUTPUT_FILE_PATH is the desired path (with the filename.ext) to the map that is going to be generated</p>
-<p><strong>Options:</strong></p>
+<p><strong>Options:(which are all optional except the colorspace one)</strong></p>
 <ul>
-<li><code>--colorspace=string</code> colorspace of the file</li>
+<li><code>--colorspace=string</code> colorspace primaries of the file</li>
 </ul>
 <div class="admonition info">
-<p>This argument should precises the colorspace of your file.</p>
+<p>This argument should precises the colorspace primaries of your file.
+In case you also use the <code>--linearize</code> option it also precise which transfer function
+is used on your file.</p>
 <p>Examples of colorspaces available:</p>
 <ul>
-<li>ACEScg, sRGB, BT709, ADOBE_WIDE_GAMUT, ADOBE_RGB_1998, ACES_2065_1</li>
+<li>ACEScg, sRGB, BT709, ADOBE_WIDE_GAMUT, ADOBE_RGB_1998, ACES2065-1</li>
 </ul>
+<p>The whole list is available here: <a href="https://colour.readthedocs.io/en/develop/generated/colour.RGB_COLOURSPACES.html#colour.RGB_COLOURSPACES">https://colour.readthedocs.io/en/develop/generated/colour.RGB_COLOURSPACES.html#colour.RGB_COLOURSPACES</a></p>
 </div>
 <ul>
 <li><code>--linearize</code> linearized the input based on the colorspace precised. </li>
@@ -652,10 +655,26 @@ normal if it looks darker) </p>
 some margin.</p>
 </div>
 <ul>
-<li><code>--help</code> display the help</li>
+<li>
+<p><code>--layername=string</code> Which layer you want to analyze, no matter if it is a multi-layer or a multi-part exr just enter
+the name of the layer you are interested (for this tool the albedo)</p>
+</li>
+<li>
+<p><code>--help</code> display the help</p>
+</li>
 </ul>
 <h3 id="querylayers-command"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 01-2 2h-2v2h4v2H9v-4a2 2 0 012-2h2V9H9V7h4a2 2 0 012 2m4-6H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> querylayers command<a class="headerlink" href="#querylayers-command" title="Permanent link">&para;</a></h3>
-<p>Display all the layers name in the file (useful for multi-layers exr)</p>
+<p>Display all the channel of all the layer in the file (useful for multi-layers exr)</p>
+<p>Return the layer index + the channels it holds. You can get 2 result:</p>
+<ul>
+<li>
+<p>"multi-layer" exr contains only one "layer"(subimage) but multiples channel. </p>
+</li>
+<li>
+<p>multi-part exr containes multiples subimages with each can contains multiple channels too</p>
+</li>
+</ul>
+<p>If both case just get the name of the albedo channel for creating the pg map. </p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/pointerGamutCLI.exe&quot;</span> querylayers FILE_PATH
 </code></pre></div>
 

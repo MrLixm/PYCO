@@ -423,8 +423,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layer-exr" class="md-nav__link">
-     Tutorial: create a Pointer's Gamut heat map from a multi-layer exr
+  <a href="#tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layerpart-exr" class="md-nav__link">
+     Tutorial: create a Pointer's Gamut heat map from a multi-layer/part exr
   </a>
   
 </li>
@@ -559,8 +559,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layer-exr" class="md-nav__link">
-     Tutorial: create a Pointer's Gamut heat map from a multi-layer exr
+  <a href="#tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layerpart-exr" class="md-nav__link">
+     Tutorial: create a Pointer's Gamut heat map from a multi-layer/part exr
   </a>
   
 </li>
@@ -615,7 +615,7 @@ You need to execute the app from a command prompt by calling commands.</p>
 <ul>
 <li>Enter the command you want to use , in this case <code>createpgmap</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe createpgmap&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> createpgmap
 </code></pre></div>
 
 <ul>
@@ -656,35 +656,48 @@ You need to execute the app from a command prompt by calling commands.</p>
 <p>The range of this parameters is 0-1, but keep it very low. Something like is 0.08 is a good value if you want 
 some margin.</p>
 </div>
-<h2 id="tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layer-exr"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 01-2 2h-2v2h4v2H9v-4a2 2 0 012-2h2V9H9V7h4a2 2 0 012 2m4-6H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> Tutorial: create a Pointer's Gamut heat map from a multi-layer exr<a class="headerlink" href="#tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layer-exr" title="Permanent link">&para;</a></h2>
+<h2 id="tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layerpart-exr"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 01-2 2h-2v2h4v2H9v-4a2 2 0 012-2h2V9H9V7h4a2 2 0 012 2m4-6H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> Tutorial: create a Pointer's Gamut heat map from a multi-layer/part exr<a class="headerlink" href="#tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layerpart-exr" title="Permanent link">&para;</a></h2>
 <p>Let's say that this time you have a multi-layer exr of one of your render and you would like to analyze the 
 "albedo" AOV that it holds:</p>
 <p>(We skip some steps as they are explained above.)</p>
 <ul>
 <li>
 <p>This time instead of createpgmap we are going to use <code>querylayers</code> that will allow us to display all the channels of 
-all the layers that your exr has. (in case you don't know how your aov is called)</p>
+all the subimages that your exr has. (in case you don't know how your aov is called)</p>
 </li>
 <li>
-<p>Just after add the path to the render</p>
+<p>Just after the path to the .exe add the path to the render/image</p>
 </li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> querylayers <span class="s2">&quot;L:\render\randomRender.exr&quot;</span>
 </code></pre></div>
 
 <ul>
-<li>Hit enter and you will see all the layers displayed (each layer is prefixed by its channel)</li>
+<li>Hit enter and you will see all the channel for each subimage displayed. Depending on how you exr is made you can get two result.
+In both case just pick the name of the albedo aov like if you see "albedoAov.G", the name is "albedoAov".</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># Example with a render from Redshift</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example with a render from Redshift (&quot;multi-layer&quot; exr)</span>
 
-<span class="o">(</span><span class="s1">&#39;R&#39;</span>, <span class="s1">&#39;G&#39;</span>, <span class="s1">&#39;B&#39;</span>, <span class="s1">&#39;A&#39;</span>, <span class="s1">&#39;Z&#39;</span>, <span class="s1">&#39;DiffuseFilter.R&#39;</span>, <span class="s1">&#39;DiffuseFilter.G&#39;</span>, <span class="s1">&#39;DiffuseFilter.B&#39;</span>, 
-<span class="s1">&#39;Emission.R&#39;</span>, <span class="s1">&#39;Emission.G&#39;</span>, <span class="s1">&#39;Emission.B&#39;</span>, <span class="s1">&#39;GIRaw.R&#39;</span>, <span class="s1">&#39;GIRaw.G&#39;</span>, <span class="s1">&#39;GIRaw.B&#39;</span>, 
-<span class="s1">&#39;SpecularLighting.R&#39;</span>, <span class="s1">&#39;SpecularLighting.G&#39;</span>, <span class="s1">&#39;SpecularLighting.B&#39;</span>, <span class="s1">&#39;VolumeF</span>
-<span class="s1">ogEmission.R&#39;</span>, <span class="s1">&#39;VolumeFogEmission.G&#39;</span><span class="o">)</span>
+SubImage Index: <span class="m">0</span>, Channels:<span class="o">(</span><span class="s1">&#39;R&#39;</span>, <span class="s1">&#39;G&#39;</span>, <span class="s1">&#39;B&#39;</span>, <span class="s1">&#39;A&#39;</span>, <span class="s1">&#39;Z&#39;</span>, 
+<span class="s1">&#39;DiffuseFilter.R&#39;</span>, <span class="s1">&#39;DiffuseFilter.G&#39;</span>, <span class="s1">&#39;DiffuseFilter.B&#39;</span>, 
+<span class="s1">&#39;Emission.R&#39;</span>, <span class="s1">&#39;Emission.G&#39;</span>, <span class="s1">&#39;Emission.B&#39;</span>, 
+<span class="s1">&#39;GIRaw.R&#39;</span>, <span class="s1">&#39;GIRaw.G&#39;</span>, <span class="s1">&#39;GIRaw.B&#39;</span>, <span class="s1">&#39;SpecularLighting.R&#39;</span>, <span class="s1">&#39;SpecularLighting.G&#39;</span><span class="o">)</span>
+
+<span class="c1"># Example of the 2nd type of result you can get: (multi-part exr with multiple subimages)</span>
+
+SubImage <span class="m">0</span>, Channels:<span class="o">(</span><span class="s1">&#39;R&#39;</span>, <span class="s1">&#39;G&#39;</span>, <span class="s1">&#39;B&#39;</span>, <span class="s1">&#39;A&#39;</span><span class="o">)</span>
+
+SubImage <span class="m">1</span>, Channels:<span class="o">(</span><span class="s1">&#39;depth.Z&#39;</span>,<span class="o">)</span>
+
+SubImage <span class="m">2</span>, Channels:<span class="o">(</span><span class="s1">&#39;albedo.R&#39;</span>, <span class="s1">&#39;albedo.G&#39;</span>, <span class="s1">&#39;albedo.B&#39;</span><span class="o">)</span>
+
+SubImage <span class="m">3</span>, Channels:<span class="o">(</span><span class="s1">&#39;speculard.R&#39;</span>, <span class="s1">&#39;speculard.G&#39;</span>, <span class="s1">&#39;speculard.B&#39;</span><span class="o">)</span>
+
+SubImage <span class="m">4</span>, Channels:<span class="o">(</span><span class="s1">&#39;sss.R&#39;</span>, <span class="s1">&#39;sss.G&#39;</span>, <span class="s1">&#39;sss.B&#39;</span><span class="o">)</span>
 </code></pre></div>
 
-<p>So now you can pick the name of the channel you want to analyze (for the Pointer's Gamut we are only interested in 
-the albedo AOV which is called DiffuseFilter by Redshift)</p>
+<p>So now you can pick the name of the layer you want to analyze (for the Pointer's Gamut we are only interested in 
+the albedo AOV which is called <code>DiffuseFilter</code> by Redshift)</p>
 <ul>
 <li>Now we can do the same steps as the first part of the tutorial, let's add the <code>createpgmap</code> command 
 , the input_file_path, the output_file_path and the colorspace .</li>
@@ -693,9 +706,9 @@ the albedo AOV which is called DiffuseFilter by Redshift)</p>
 </code></pre></div>
 
 <ul>
-<li>The only difference is this time, add the <code>--layer</code> option with, as value, the name of your albedo aov that we pick before.</li>
+<li>The only difference is this time, add the <code>--layername</code> option with, as value, the name of your albedo aov that we pick before.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> createpgmap <span class="s2">&quot;L:\render\randomRender.exr&quot;</span> <span class="s2">&quot;L:\render\renderX_pgmap.jpg&quot;</span> --colorspace<span class="o">=</span>ACEScg --layer<span class="o">=</span>DiffuseFilter 
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> createpgmap <span class="s2">&quot;L:\render\randomRender.exr&quot;</span> <span class="s2">&quot;L:\render\renderX_pgmap.jpg&quot;</span> --colorspace<span class="o">=</span>ACEScg --layername<span class="o">=</span>DiffuseFilter 
 </code></pre></div>
 
 <ul>

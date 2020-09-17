@@ -708,7 +708,8 @@ the albedo AOV which is called <code>DiffuseFilter</code> by Redshift)</p>
 </code></pre></div>
 
 <ul>
-<li>The only difference is this time, add the <code>--layername</code> option with, as value, the name of your albedo aov that we pick before.</li>
+<li>The only difference is this time, add the <code>--layername</code> option with, as value, the name of your albedo aov that we 
+pick before. (so for me it's DiffuseFilter)</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> createpgmap <span class="s2">&quot;L:\render\randomRender.exr&quot;</span> <span class="s2">&quot;L:\render\renderX_pgmap.jpg&quot;</span> --colorspace<span class="o">=</span>ACEScg --layername<span class="o">=</span>DiffuseFilter 
 </code></pre></div>
@@ -717,7 +718,10 @@ the albedo AOV which is called <code>DiffuseFilter</code> by Redshift)</p>
 <li>Hit enter and you got your map</li>
 </ul>
 <h2 id="exemple-of-command">Exemple of command:<a class="headerlink" href="#exemple-of-command" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;./script/pointerGamutCLI.exe&quot;</span> createpgmap <span class="s2">&quot;L:\megascans\td3nedtla_4K_Albedo.exr&quot;</span> <span class="s2">&quot;L:\megascans\CLI_apple_01.jpg&quot;</span> --colorspace<span class="o">=</span>sRGB --tolerance<span class="o">=</span><span class="m">0</span>.1 --out_map_type<span class="o">=</span>add  
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> createpgmap <span class="s2">&quot;L:\render\randomRender.exr&quot;</span> <span class="s2">&quot;L:\render\renderX_pgmap.jpg&quot;</span> --colorspace<span class="o">=</span>ACEScg --layername<span class="o">=</span>Albedo 
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;./script/pointerGamutCLI.exe&quot;</span> createpgmap <span class="s2">&quot;L:\megascans\td3nedtla_4K_Albedo.jpg&quot;</span> <span class="s2">&quot;L:\megascans\CLI_apple_01.jpg&quot;</span> --colorspace<span class="o">=</span>sRGB --linearize --tolerance<span class="o">=</span><span class="m">0</span>.1 --out_map_type<span class="o">=</span>add  
 </code></pre></div>
                 
               

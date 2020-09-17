@@ -433,6 +433,54 @@
      createpgmap command
   </a>
   
+    <nav class="md-nav" aria-label=" createpgmap command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-colorspacestring" class="md-nav__link">
+    --colorspace=string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-linearize" class="md-nav__link">
+    --linearize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-out_map_typestring" class="md-nav__link">
+    --out_map_type=string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-tolerancenumber" class="md-nav__link">
+    --tolerance=number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-layernamestring" class="md-nav__link">
+    --layername=string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-help" class="md-nav__link">
+    --help
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -563,6 +611,54 @@
      createpgmap command
   </a>
   
+    <nav class="md-nav" aria-label=" createpgmap command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-colorspacestring" class="md-nav__link">
+    --colorspace=string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-linearize" class="md-nav__link">
+    --linearize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-out_map_typestring" class="md-nav__link">
+    --out_map_type=string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-tolerancenumber" class="md-nav__link">
+    --tolerance=number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-layernamestring" class="md-nav__link">
+    --layername=string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-help" class="md-nav__link">
+    --help
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -614,9 +710,8 @@
 <p>INPUT_FILE_PATH is the path to the image to generate the map from</p>
 <p>OUTPUT_FILE_PATH is the desired path (with the filename.ext) to the map that is going to be generated</p>
 <p><strong>Options:(which are all optional except the colorspace one)</strong></p>
-<ul>
-<li><code>--colorspace=string</code> colorspace primaries of the file</li>
-</ul>
+<h4 id="-colorspacestring"><code>--colorspace=string</code><a class="headerlink" href="#-colorspacestring" title="Permanent link">&para;</a></h4>
+<p>colorspace primaries of the file</p>
 <div class="admonition info">
 <p>This argument should precises the colorspace primaries of your file.
 In case you also use the <code>--linearize</code> option it also precise which transfer function
@@ -627,9 +722,8 @@ is used on your file.</p>
 </ul>
 <p>The whole list is available here: <a href="https://colour.readthedocs.io/en/develop/generated/colour.RGB_COLOURSPACES.html#colour.RGB_COLOURSPACES">https://colour.readthedocs.io/en/develop/generated/colour.RGB_COLOURSPACES.html#colour.RGB_COLOURSPACES</a></p>
 </div>
-<ul>
-<li><code>--linearize</code> linearized the input based on the colorspace precised. </li>
-</ul>
+<h4 id="-linearize"><code>--linearize</code><a class="headerlink" href="#-linearize" title="Permanent link">&para;</a></h4>
+<p>linearized the input based on the colorspace precised. </p>
 <div class="admonition info">
 <p><strong>The tool awaits for linear data</strong>, if you input an image with a transfer function applied, the linearize option 
 will invert this transfer function to get linear data (the transfer function is determined by the colorspace
@@ -637,32 +731,26 @@ argument you submitted).
 This is an internal operation that <strong>doesn't affect the original file</strong>.</p>
 <p>For example if you input a .jpg/.png you should use this option.</p>
 </div>
-<ul>
-<li><code>--out_map_type=string</code> Choose the type of map to output (heat, add) </li>
-</ul>
+<h4 id="-out_map_typestring"><code>--out_map_type=string</code><a class="headerlink" href="#-out_map_typestring" title="Permanent link">&para;</a></h4>
+<p>Choose the type of map to output (heat, add) </p>
 <div class="admonition info">
 <p><em>[default=heat]</em></p>
 <p><strong>Heat</strong> will output a black map with pixels gamut that are not in the PG with a red color</p>
 <p><strong>Add</strong> will just adds the above map onto the original file (that has been multiplied by 0.65 so this is 
 normal if it looks darker) </p>
 </div>
-<ul>
-<li><code>--tolerance=number</code> How far from the pointer gamut you authorize the pixel values to be. </li>
-</ul>
+<h4 id="-tolerancenumber"><code>--tolerance=number</code><a class="headerlink" href="#-tolerancenumber" title="Permanent link">&para;</a></h4>
+<p>How far from the pointer gamut you authorize the pixel values to be. </p>
 <div class="admonition info">
 <p><em>[default=0]</em></p>
 <p>The range of this parameters is 0-1, but keep it very low. Something like is 0.08 is a good value if you want 
 some margin.</p>
 </div>
-<ul>
-<li>
-<p><code>--layername=string</code> Which layer you want to analyze, no matter if it is a multi-layer or a multi-part exr just enter
+<h4 id="-layernamestring"><code>--layername=string</code><a class="headerlink" href="#-layernamestring" title="Permanent link">&para;</a></h4>
+<p>Which layer you want to analyze, no matter if it is a multi-layer or a multi-part exr just enter
 the name of the layer you are interested (for this tool the albedo)</p>
-</li>
-<li>
-<p><code>--help</code> display the help</p>
-</li>
-</ul>
+<h4 id="-help"><code>--help</code><a class="headerlink" href="#-help" title="Permanent link">&para;</a></h4>
+<p>display the help</p>
 <h3 id="querylayers-command"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 01-2 2h-2v2h4v2H9v-4a2 2 0 012-2h2V9H9V7h4a2 2 0 012 2m4-6H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> querylayers command<a class="headerlink" href="#querylayers-command" title="Permanent link">&para;</a></h3>
 <p>Display all the channel of all the layer in the file (useful for multi-layers exr)</p>
 <p>Return the layer index + the channels it holds. You can get 2 result:</p>

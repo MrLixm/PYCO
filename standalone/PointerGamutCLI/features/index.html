@@ -834,7 +834,7 @@
 <h4 id="-colorspacestring"><code>--colorspace=string</code><a class="headerlink" href="#-colorspacestring" title="Permanent link">&para;</a></h4>
 <p>colorspace primaries of the file</p>
 <div class="admonition info">
-<p>This argument should precises the colorspace primaries of your file.
+<p>This argument should specify the colorspace primaries of your file.
 In case you also use the <code>--linearize</code> option it also precise which transfer function
 is used on your file.</p>
 <p>Examples of colorspaces available:</p>
@@ -844,7 +844,7 @@ is used on your file.</p>
 <p>The whole list is available here: <a href="https://colour.readthedocs.io/en/develop/generated/colour.RGB_COLOURSPACES.html#colour.RGB_COLOURSPACES">https://colour.readthedocs.io/en/develop/generated/colour.RGB_COLOURSPACES.html#colour.RGB_COLOURSPACES</a></p>
 </div>
 <h4 id="-linearize"><code>--linearize</code><a class="headerlink" href="#-linearize" title="Permanent link">&para;</a></h4>
-<p>linearized the input based on the colorspace precised. </p>
+<p>linearized the input based on the colorspace specified. </p>
 <div class="admonition info">
 <p><strong>The tool awaits for linear data</strong>, if you input an image with a transfer function applied, the linearize option 
 will invert this transfer function to get linear data (the transfer function is determined by the colorspace
@@ -868,7 +868,7 @@ normal if it looks darker) </p>
 some margin.</p>
 </div>
 <h4 id="-layernamestring"><code>--layername=string</code><a class="headerlink" href="#-layernamestring" title="Permanent link">&para;</a></h4>
-<p>Which layer you want to analyze, no matter if it is a multi-layer or a multi-part exr just enter
+<p>Which layer you want to analyse, no matter if it is a multi-layer or a multi-part exr just enter
 the name of the layer you are interested (for this tool the albedo)</p>
 <h4 id="-help"><code>--help</code><a class="headerlink" href="#-help" title="Permanent link">&para;</a></h4>
 <p>display the help</p>
@@ -880,7 +880,7 @@ the name of the layer you are interested (for this tool the albedo)</p>
 <p>"multi-layer" exr contains only one "layer"(subimage) but multiples channel. </p>
 </li>
 <li>
-<p>multi-part exr containes multiples subimages with each can contains multiple channels too</p>
+<p>multi-part exr contains multiples subimages with each can contains multiple channels too</p>
 </li>
 </ul>
 <p>If both case just get the name of the albedo channel for creating the pg map. </p>

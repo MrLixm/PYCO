@@ -455,8 +455,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemple-of-command" class="md-nav__link">
-    Exemple of command:
+  <a href="#example-of-command" class="md-nav__link">
+    Example of command:
   </a>
   
 </li>
@@ -687,8 +687,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemple-of-command" class="md-nav__link">
-    Exemple of command:
+  <a href="#example-of-command" class="md-nav__link">
+    Example of command:
   </a>
   
 </li>
@@ -742,7 +742,7 @@ You need to execute the app from a command prompt by calling commands.</p>
 </code></pre></div>
 
 <ul>
-<li>Get the path of the image you want to analyze, and paste it after the path of the executable
+<li>Get the path of the image you want to analyse, and paste it after the path of the executable
  (as always with a space in between)</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> createpgmap <span class="s2">&quot;L:\texture\randomTexture.exr&quot;</span>
@@ -755,18 +755,18 @@ You need to execute the app from a command prompt by calling commands.</p>
 </code></pre></div>
 
 <ul>
-<li>Enter the colorspace of the file <code>--colorspace=sRGB</code> (always with a space after the last argument writed)</li>
+<li>Enter the colorspace of the file <code>--colorspace=sRGB</code> (always with a space after the last argument wrote)</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>This argument should precises the colorspace of your file.</p>
+<p>This argument should specify the colorspace of your file.</p>
 <p>Examples of colorspaces available:</p>
 <ul>
 <li>ACEScg, sRGB, BT709, ADOBE_WIDE_GAMUT, ADOBE_RGB_1998, ACES_2065_1</li>
 </ul>
 </div>
 <ul>
-<li>If your file is not linear add <code>--linearize</code> that will linearize your file based on the colorspace precised.</li>
+<li>If your file is not linear add <code>--linearize</code> that will linearize your file based on the colorspace specified.</li>
 </ul>
 <div class="admonition info">
 <p>Please refer to the <strong>features</strong> page where this option is explained in detail.</p>
@@ -780,7 +780,7 @@ You need to execute the app from a command prompt by calling commands.</p>
 some margin.</p>
 </div>
 <h2 id="tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layerpart-exr"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 01-2 2h-2v2h4v2H9v-4a2 2 0 012-2h2V9H9V7h4a2 2 0 012 2m4-6H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> Tutorial: create a Pointer's Gamut heat map from a multi-layer/part exr<a class="headerlink" href="#tutorial-create-a-pointers-gamut-heat-map-from-a-multi-layerpart-exr" title="Permanent link">&para;</a></h2>
-<p>Let's say that this time you have a multi-layer exr of one of your render and you would like to analyze the 
+<p>Let's say that this time you have a multi-layer exr of one of your render and you would like to analyse the 
 "albedo" AOV that it holds:</p>
 <p>(We skip some steps as they are explained above.)</p>
 <ul>
@@ -819,7 +819,7 @@ SubImage <span class="m">3</span>, Channels:<span class="o">(</span><span class=
 SubImage <span class="m">4</span>, Channels:<span class="o">(</span><span class="s1">&#39;sss.R&#39;</span>, <span class="s1">&#39;sss.G&#39;</span>, <span class="s1">&#39;sss.B&#39;</span><span class="o">)</span>
 </code></pre></div>
 
-<p>So now you can pick the name of the layer you want to analyze (for the Pointer's Gamut we are only interested in 
+<p>So now you can pick the name of the layer you want to analyse (for the Pointer's Gamut we are only interested in 
 the albedo AOV which is called <code>DiffuseFilter</code> by Redshift)</p>
 <ul>
 <li>Now we can do the same steps as the first part of the tutorial, let's add the <code>createpgmap</code> command 
@@ -838,7 +838,7 @@ pick before. (so for me it's DiffuseFilter)</li>
 <ul>
 <li>Hit enter and you got your map</li>
 </ul>
-<h2 id="exemple-of-command">Exemple of command:<a class="headerlink" href="#exemple-of-command" title="Permanent link">&para;</a></h2>
+<h2 id="example-of-command">Example of command:<a class="headerlink" href="#example-of-command" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\PointerGamutCLTool_v1.exe&quot;</span> createpgmap <span class="s2">&quot;L:\render\randomRender.exr&quot;</span> <span class="s2">&quot;L:\render\renderX_pgmap.jpg&quot;</span> --colorspace<span class="o">=</span>ACEScg --layername<span class="o">=</span>Albedo 
 </code></pre></div>
 

@@ -508,8 +508,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#settings" class="md-nav__link">
-     Settings
+  <a href="#settings-for-the-context-menu" class="md-nav__link">
+     Settings (for the context-menu)
   </a>
   
 </li>
@@ -530,6 +530,26 @@
   <a href="#utilisation" class="md-nav__link">
      Utilisation
   </a>
+  
+    <nav class="md-nav" aria-label=" Utilisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#right-click-context-menu" class="md-nav__link">
+    Right click context menu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line-interface" class="md-nav__link">
+    Command line interface
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -758,8 +778,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#settings" class="md-nav__link">
-     Settings
+  <a href="#settings-for-the-context-menu" class="md-nav__link">
+     Settings (for the context-menu)
   </a>
   
 </li>
@@ -780,6 +800,26 @@
   <a href="#utilisation" class="md-nav__link">
      Utilisation
   </a>
+  
+    <nav class="md-nav" aria-label=" Utilisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#right-click-context-menu" class="md-nav__link">
+    Right click context menu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line-interface" class="md-nav__link">
+    Command line interface
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -808,7 +848,7 @@
 <p>Just unzip the file you downloaded and put the folder anywhere you want.</p>
 <p>To install the Right-click context-menu follow the steps bellow.
 Be carefull as you need to have the administrator rights on your pc to install it. (it needs to create keys in the registery editor)</p>
-<h3 id="settings"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 018.5 12 3.5 3.5 0 0112 8.5a3.5 3.5 0 013.5 3.5 3.5 3.5 0 01-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0014 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66z"/></svg></span> Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h3>
+<h3 id="settings-for-the-context-menu"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 018.5 12 3.5 3.5 0 0112 8.5a3.5 3.5 0 013.5 3.5 3.5 3.5 0 01-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0014 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66z"/></svg></span> Settings (for the context-menu)<a class="headerlink" href="#settings-for-the-context-menu" title="Permanent link">&para;</a></h3>
 <p>Next to the ...INSTALLER.exe you will find an <code>installer_settings.json</code>. This file will be used by the installer to determine some settings.
 You can modify it to change the default behavior of the installer.(Json file can be easily opened in any text editor)</p>
 <p>Options:</p>
@@ -829,7 +869,8 @@ You can modify it to change the default behavior of the installer.(Json file can
 <li>install_path: <code>null</code> or <code>string</code></li>
 </ul>
 <p><code>null</code> to have the default installation path in your documents</p>
-<p>else you can enter a custom path as: <code>"E:/Softwares/Tools"</code> for exemple</p>
+<p>else you can enter a custom path as: <code>"E:/Softwares/Tools"</code> for exemple.</p>
+<p>Think to use <code>/</code> or <code>\\</code> and not <code>\</code> in the path !</p>
 </div>
 <div class="admonition info">
 <ul>
@@ -849,6 +890,7 @@ a comma <code>,</code></p>
     <span class="nt">&quot;remove_keys&quot;</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">}</span>
 </code></pre></div>
+
 </div>
 <h3 id="installer"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2.03c4.73.47 8.5 4.22 8.95 8.97A9.976 9.976 0 0113 21.93v-2c3.64-.43 6.5-3.32 6.96-6.96A7.994 7.994 0 0013 4.05V2.03m-2 .03v2c-1.43.2-2.78.78-3.9 1.68L5.67 4.26A9.827 9.827 0 0111 2.06M4.26 5.67L5.69 7.1A8.017 8.017 0 004.05 11h-2c.2-1.96.95-3.81 2.21-5.33M2.06 13h2c.18 1.42.75 2.77 1.63 3.9l-1.42 1.43A10.04 10.04 0 012.06 13m5.04 5.37c1.13.88 2.48 1.45 3.9 1.63v2c-1.96-.21-3.82-1-5.33-2.26l1.43-1.37M12 16.5L7.5 12H11V8h2v4h3.5L12 16.5z"/></svg></span> Installer<a class="headerlink" href="#installer" title="Permanent link">&para;</a></h3>
 <p>When you have modified your settings as you want or the default ones are just good you can run the INSTALLER.exe file.</p>
@@ -867,18 +909,55 @@ a comma <code>,</code></p>
 </ul>
 <p>Aaand you'r good, then right click on any exr to see if the context menus appear.</p>
 <h2 id="utilisation"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 9a1 1 0 011-1 1 1 0 011 1v4.47l1.21.13 4.94 2.19c.53.24.85.77.85 1.35v4.36c-.03.82-.68 1.47-1.5 1.5H11c-.38 0-.74-.15-1-.43l-4.9-4.2.74-.77c.19-.21.46-.32.74-.32h.22L10 19V9m1-4a4 4 0 014 4c0 1.5-.8 2.77-2 3.46v-1.22c.61-.55 1-1.35 1-2.24a3 3 0 00-3-3 3 3 0 00-3 3c0 .89.39 1.69 1 2.24v1.22C7.8 11.77 7 10.5 7 9a4 4 0 014-4z"/></svg></span> Utilisation<a class="headerlink" href="#utilisation" title="Permanent link">&para;</a></h2>
+<h3 id="right-click-context-menu">Right click context menu<a class="headerlink" href="#right-click-context-menu" title="Permanent link">&para;</a></h3>
 <p>I think the right click menu is pretty explicit in what it does.</p>
-<p>As explained on the home page:</p>
-<p>There is two method for resizing exrs, swarp-resize and resize.</p>
-<p><strong>Swap resize</strong> was made to perform optimisation on existing textures in a production. It will resize the existing texture,
-rename the original with a prefix so it can be reversed, and rename the resized version with the same name as the original.
-Thus, you can quickly resize texture used in your DCC without having to update the path.</p>
-<p><strong>Resize</strong> is the traditionnal resize that will create a new exr resized to the given dimensions.</p>
-<p>Both method strictly resize to a 1x1 ratio and were designed mainly for textures in mind.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>These methods will crop any input to RGBA only.</p>
-</div>
+<p>If you still have some doubts on what it does you can read the <a href="../home/">home page</a> </p>
+<h3 id="command-line-interface">Command line interface<a class="headerlink" href="#command-line-interface" title="Permanent link">&para;</a></h3>
+<p>This application is Command Line based, it means if you try to just open the .exe, nothing will happens.
+You need to execute the app from a command prompt by calling commands.</p>
+<ul>
+<li>
+<p>Open the Windows command prompt (win+r type <em>cmd</em> and hits enter)</p>
+</li>
+<li>
+<p>First you need to get the path to the .exe so go where you saved the app, shift+rightclick on it -&gt; copy as path</p>
+</li>
+<li>
+<p>Go back in the command prompt, paste the path (shift+inser)(the path must start and end with <code>""</code>)</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\EXRTools.exe&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>Enter the command you want to use (see <a href="../features/">features</a>), for this quick example we are going to use <code>exr-resize</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\EXRTools.exe&quot;</span> exr-resize
+</code></pre></div>
+
+<ul>
+<li>Get the path of the image you want to resize, and paste it after the command
+ (as always with a space in between)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\EXRTools.exe&quot;</span> exr-resize <span class="s2">&quot;L:\texture\randomTexture.exr&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>Now just enter the resolution you want to resize to</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\EXRTools.exe&quot;</span> exr-resize <span class="s2">&quot;L:\texture\randomTexture.exr&quot;</span> <span class="m">1024</span>
+</code></pre></div>
+
+<ul>
+<li>You can press Enter as all the required arguments are given, but for this exemple we are going to add the option
+<code>--suffix</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\EXRTools.exe&quot;</span> exr-resize <span class="s2">&quot;L:\texture\randomTexture.exr&quot;</span> <span class="m">1024</span> --suffix<span class="o">=</span>_resize1024
+</code></pre></div>
+
+<ul>
+<li>Press enter and wait for the converter to finish</li>
+</ul>
                 
               
               

@@ -512,6 +512,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#context-menu" class="md-nav__link">
+    Context menu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-interface" class="md-nav__link">
+    Command Line Interface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#command-list" class="md-nav__link">
      Command list
   </a>
@@ -562,8 +576,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-default_suffix" class="md-nav__link">
-    --default_suffix
+  <a href="#-suffix" class="md-nav__link">
+    --suffix
   </a>
   
 </li>
@@ -603,8 +617,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-default_suffix_1" class="md-nav__link">
-    --default_suffix
+  <a href="#-suffix_1" class="md-nav__link">
+    --suffix
   </a>
   
 </li>
@@ -671,8 +685,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-default_suffix_2" class="md-nav__link">
-    --default_suffix
+  <a href="#-suffix_2" class="md-nav__link">
+    --suffix
   </a>
   
 </li>
@@ -899,6 +913,20 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#context-menu" class="md-nav__link">
+    Context menu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-interface" class="md-nav__link">
+    Command Line Interface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#command-list" class="md-nav__link">
      Command list
   </a>
@@ -949,8 +977,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-default_suffix" class="md-nav__link">
-    --default_suffix
+  <a href="#-suffix" class="md-nav__link">
+    --suffix
   </a>
   
 </li>
@@ -990,8 +1018,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-default_suffix_1" class="md-nav__link">
-    --default_suffix
+  <a href="#-suffix_1" class="md-nav__link">
+    --suffix
   </a>
   
 </li>
@@ -1058,8 +1086,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#-default_suffix_2" class="md-nav__link">
-    --default_suffix
+  <a href="#-suffix_2" class="md-nav__link">
+    --suffix
   </a>
   
 </li>
@@ -1098,6 +1126,12 @@
                 
                 
                 <h1 id="features"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 2a2 2 0 00-2 2v10h2V4h10V2H4m4 4a2 2 0 00-2 2v10h2V8h10V6H8m12 6v8h-8v-8h8m0-2h-8a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-8a2 2 0 00-2-2m-1 7h-6v-2h6v2z"/></svg></span> Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h1>
+<h2 id="context-menu">Context menu<a class="headerlink" href="#context-menu" title="Permanent link">&para;</a></h2>
+<p>By default the application is copied to your Documents location in a PYCO/EXRTools folder.</p>
+<p>If modifying the installer settings to uninstall the keys doesn't work you can open the registery editor and delete the PYCO keys in 
+<code>HKEY_CLASSES_ROOT\SystemFileAssociations\.exr</code></p>
+<h2 id="command-line-interface">Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permanent link">&para;</a></h2>
+<p>This section describe the feature of the CLI application.</p>
 <p>Structure:
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/EXRTools.exe&quot;</span> <span class="nb">command</span> arguments <span class="o">[</span>Options<span class="o">]</span>
 </code></pre></div></p>
@@ -1107,6 +1141,7 @@
 renamed like the original. </p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/EXRTools.exe&quot;</span> exr-swap-resize EXR_FILE RESOLUTION <span class="o">[</span>Options<span class="o">]</span>
 </code></pre></div>
+
 <p><strong>Arguments:</strong></p>
 <ul>
 <li>
@@ -1121,10 +1156,15 @@ renamed like the original. </p>
 <p>Revert the resize operation by deleting the resize result and renaming the original image (remove OLD_ prefix)</p>
 <h4 id="-auto_close"><code>--auto_close</code><a class="headerlink" href="#-auto_close" title="Permanent link">&para;</a></h4>
 <p>Command shelf self close at the end of the process if specified. (instead of asking the user to press a key to close)</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These methods will crop any input to RGBA only.</p>
+</div>
 <h3 id="exr-resize-command"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 01-2 2h-2v2h4v2H9v-4a2 2 0 012-2h2V9H9V7h4a2 2 0 012 2m4-6H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> exr-resize command<a class="headerlink" href="#exr-resize-command" title="Permanent link">&para;</a></h3>
 <p>Resize an exr to the given resolution (1:1 ratio).</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/EXRTools.exe&quot;</span> exr-resize EXR_FILE RESOLUTION <span class="o">[</span>Options<span class="o">]</span>
 </code></pre></div>
+
 <p><strong>Arguments:</strong></p>
 <ul>
 <li>
@@ -1138,14 +1178,19 @@ renamed like the original. </p>
 <h4 id="-out_path"><code>--out_path</code><a class="headerlink" href="#-out_path" title="Permanent link">&para;</a></h4>
 <p>Specify an output path for the converted exr (with filename.exr). By default the resized version is created at the
 same location of the original.</p>
-<h4 id="-default_suffix"><code>--default_suffix</code><a class="headerlink" href="#-default_suffix" title="Permanent link">&para;</a></h4>
+<h4 id="-suffix"><code>--suffix</code><a class="headerlink" href="#-suffix" title="Permanent link">&para;</a></h4>
 <p>Specify the suffix on the file name when --out_path is not specified. The default one is based on the resolution.</p>
 <h4 id="-auto_close_1"><code>--auto_close</code><a class="headerlink" href="#-auto_close_1" title="Permanent link">&para;</a></h4>
 <p>Command shelf self close at the end of the process if specified. (instead of asking the user to press a key to close)</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These methods will crop any input to RGBA only.</p>
+</div>
 <h3 id="exr-to-mpart-command"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 01-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg></span> exr-to-mpart command<a class="headerlink" href="#exr-to-mpart-command" title="Permanent link">&para;</a></h3>
 <p>Convert a multi-channel exr to a multi-part one</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/EXRTools.exe&quot;</span> exr-to-mpart EXR_FILE <span class="o">[</span>Options<span class="o">]</span>
 </code></pre></div>
+
 <p><strong>Arguments:</strong></p>
 <ul>
 <li>(str)EXR_FILE is the path to the exr.</li>
@@ -1162,7 +1207,7 @@ same location of the original.</p>
 <p><code>tiles:tiles_width,tile_height</code> tiles size must be specified after a colon, separated by a comma. </p>
 <p><code>image</code> write the whole image at once (very slow)</p>
 </div>
-<h4 id="-default_suffix_1"><code>--default_suffix</code><a class="headerlink" href="#-default_suffix_1" title="Permanent link">&para;</a></h4>
+<h4 id="-suffix_1"><code>--suffix</code><a class="headerlink" href="#-suffix_1" title="Permanent link">&para;</a></h4>
 <p>Specify the suffix on the file name when --out_path is not specified. The default one is <code>_mpart</code></p>
 <h4 id="-auto_close_2"><code>--auto_close</code><a class="headerlink" href="#-auto_close_2" title="Permanent link">&para;</a></h4>
 <p>Command shelf self close at the end of the process if specified. (instead of asking the user to press a key to close)</p>
@@ -1174,6 +1219,7 @@ same location of the original.</p>
 <p>Return useful informations about the exr</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/EXRTools.exe&quot;</span> exr-info EXR_FILE <span class="o">[</span>Options<span class="o">]</span>
 </code></pre></div>
+
 <p><strong>Arguments:</strong></p>
 <ul>
 <li>(str)EXR_FILE is the path to the exr.</li>
@@ -1187,6 +1233,7 @@ same location of the original.</p>
 <p>Resize an exr to the given resolution (1:1 ratio).</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/EXRTools.exe&quot;</span> exr-recompress EXR_FILE COMPRESSION <span class="o">[</span>Options<span class="o">]</span>
 </code></pre></div>
+
 <p><strong>Arguments:</strong></p>
 <ul>
 <li>
@@ -1196,6 +1243,7 @@ same location of the original.</p>
 <p>(str)COMPRESSION is the compression method to use.</p>
 <p>Method available are <code>none, rle, zip, zips, piz, pxr24, b44, b44a, dwaa, dwab</code></p>
 <p>If you are using <code>dwaa</code> or <code>dwab</code> you can specify the compression level after a colon. ex: <code>dwaa:30</code></p>
+<p><code>b44, b44a, pxr24</code> are made for HALF-Float images. <code>b44a</code> is supported for flat images (uniform colors)</p>
 </li>
 </ul>
 <p><strong>Options:</strong></p>
@@ -1210,10 +1258,14 @@ same location of the original.</p>
 <p><code>tiles:tiles_width,tile_height</code> tiles size must be specified after a colon, separated by a comma. </p>
 <p><code>image</code> write the whole image at once (very slow)</p>
 </div>
-<h4 id="-default_suffix_2"><code>--default_suffix</code><a class="headerlink" href="#-default_suffix_2" title="Permanent link">&para;</a></h4>
+<h4 id="-suffix_2"><code>--suffix</code><a class="headerlink" href="#-suffix_2" title="Permanent link">&para;</a></h4>
 <p>Specify the suffix on the file name when --out_path is not specified. The default one is based on the compression method.</p>
 <h4 id="-auto_close_3"><code>--auto_close</code><a class="headerlink" href="#-auto_close_3" title="Permanent link">&para;</a></h4>
 <p>Command shelf self close at the end of the process if specified. (instead of asking the user to press a key to close)</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If you submit a multi-part exr all the parts are going to be recompressed to the same given compression.</p>
+</div>
 <div class="admonition bug">
 <p class="admonition-title">Known Issues</p>
 <p>If some erros happens during the process, the script will try to delete the potential created file but will fail.</p>

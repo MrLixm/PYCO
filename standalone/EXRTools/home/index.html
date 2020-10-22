@@ -8,7 +8,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Home of the documentation for PYCO applications. PYCO apps target a VFX-CGI public and help them create and work faster. This go from the in-app python script to the standalone app.">
+        <meta name="description" content="Home of the documentation for PYCO applications. PYCO apps target a VFX-CGI public and help them create and work faster. This go from the in-dcc python script to the standalone application.">
       
       
         <link rel="canonical" href="https://mrlixm.github.io/PYCO/standalone/EXRTools/home/">
@@ -854,7 +854,7 @@ Where the thing get interesting is that there is actually two types of EXR that 
 <p>The <strong>multi-channel</strong> one consists of creating as much channel as you need for each image, so for example if you display
 the channels of a multi-channel EXR you will have something like that: 
 <code>('R', 'G', 'B', 'A', 'Z', 'Diffuse.R', 'Diffuse.G', 'Diffuse.B', 'Emission.R', 'Emission.G', 'Emission.B', 'GIRaw.R', 'GIRaw.G', 'GIRaw.B')</code>
-At the beginning of the existing of the EXR format this was the only method available, now that the other one exists this method
+At the beginning of the existence of the EXR format this was the only method available, now that the other one exists this method
 produce EXR that are much slower to read (it depends of the number of channels).</p>
 <p>The <strong>multi-part</strong> one is like having multiple images(refered as parts or sub-images) in one single file. When opened, 
 only the desired part is read which product faster read result than the multi-channel method.</p>

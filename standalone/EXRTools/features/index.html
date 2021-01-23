@@ -199,7 +199,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../../katana/msimporter/home/" class="md-tabs__link">
+        <a href="../../../katana/TextureMonitor/home/" class="md-tabs__link">
           Katana
         </a>
       
@@ -345,6 +345,18 @@
   <li class="md-nav__item">
     <a href="../../ColorspaceConvert/development/" title="Development" class="md-nav__link">
       Development
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ColorspaceConvert/linux/" title="For Linux" class="md-nav__link">
+      For Linux
     </a>
   </li>
 
@@ -814,13 +826,91 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
     
     <label class="md-nav__link" for="nav-4-1">
+      Texture Monitor
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Texture Monitor" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Texture Monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../katana/TextureMonitor/home/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../katana/TextureMonitor/startguide/" title="Start Guide" class="md-nav__link">
+      Start Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../katana/TextureMonitor/features/" title="Features" class="md-nav__link">
+      Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../katana/TextureMonitor/development/" title="Development" class="md-nav__link">
+      Development
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
       Megascans Importer
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Megascans Importer" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-1">
+      <label class="md-nav__title" for="nav-4-2">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -1141,7 +1231,6 @@
 renamed like the original. </p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/EXRTools.exe&quot;</span> exr-swap-resize EXR_FILE RESOLUTION <span class="o">[</span>Options<span class="o">]</span>
 </code></pre></div>
-
 <p><strong>Arguments:</strong></p>
 <ul>
 <li>
@@ -1164,7 +1253,6 @@ renamed like the original. </p>
 <p>Resize an exr to the given resolution (1:1 ratio).</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/EXRTools.exe&quot;</span> exr-resize EXR_FILE RESOLUTION <span class="o">[</span>Options<span class="o">]</span>
 </code></pre></div>
-
 <p><strong>Arguments:</strong></p>
 <ul>
 <li>
@@ -1190,7 +1278,6 @@ same location of the original.</p>
 <p>Convert a multi-channel exr to a multi-part one</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/EXRTools.exe&quot;</span> exr-to-mpart EXR_FILE <span class="o">[</span>Options<span class="o">]</span>
 </code></pre></div>
-
 <p><strong>Arguments:</strong></p>
 <ul>
 <li>(str)EXR_FILE is the path to the exr.</li>
@@ -1219,7 +1306,6 @@ same location of the original.</p>
 <p>Return useful informations about the exr</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/EXRTools.exe&quot;</span> exr-info EXR_FILE <span class="o">[</span>Options<span class="o">]</span>
 </code></pre></div>
-
 <p><strong>Arguments:</strong></p>
 <ul>
 <li>(str)EXR_FILE is the path to the exr.</li>
@@ -1233,7 +1319,6 @@ same location of the original.</p>
 <p>Resize an exr to the given resolution (1:1 ratio).</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;pathto/EXRTools.exe&quot;</span> exr-recompress EXR_FILE COMPRESSION <span class="o">[</span>Options<span class="o">]</span>
 </code></pre></div>
-
 <p><strong>Arguments:</strong></p>
 <ul>
 <li>

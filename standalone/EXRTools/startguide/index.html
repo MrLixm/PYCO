@@ -199,7 +199,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../../katana/msimporter/home/" class="md-tabs__link">
+        <a href="../../../katana/TextureMonitor/home/" class="md-tabs__link">
           Katana
         </a>
       
@@ -345,6 +345,18 @@
   <li class="md-nav__item">
     <a href="../../ColorspaceConvert/development/" title="Development" class="md-nav__link">
       Development
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ColorspaceConvert/linux/" title="For Linux" class="md-nav__link">
+      For Linux
     </a>
   </li>
 
@@ -671,13 +683,91 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
     
     <label class="md-nav__link" for="nav-4-1">
+      Texture Monitor
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Texture Monitor" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Texture Monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../katana/TextureMonitor/home/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../katana/TextureMonitor/startguide/" title="Start Guide" class="md-nav__link">
+      Start Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../katana/TextureMonitor/features/" title="Features" class="md-nav__link">
+      Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../katana/TextureMonitor/development/" title="Development" class="md-nav__link">
+      Development
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
       Megascans Importer
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Megascans Importer" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-1">
+      <label class="md-nav__title" for="nav-4-2">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -890,7 +980,6 @@ a comma <code>,</code></p>
     <span class="nt">&quot;remove_keys&quot;</span><span class="p">:</span> <span class="kc">false</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <h3 id="installer"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2.03c4.73.47 8.5 4.22 8.95 8.97A9.976 9.976 0 0113 21.93v-2c3.64-.43 6.5-3.32 6.96-6.96A7.994 7.994 0 0013 4.05V2.03m-2 .03v2c-1.43.2-2.78.78-3.9 1.68L5.67 4.26A9.827 9.827 0 0111 2.06M4.26 5.67L5.69 7.1A8.017 8.017 0 004.05 11h-2c.2-1.96.95-3.81 2.21-5.33M2.06 13h2c.18 1.42.75 2.77 1.63 3.9l-1.42 1.43A10.04 10.04 0 012.06 13m5.04 5.37c1.13.88 2.48 1.45 3.9 1.63v2c-1.96-.21-3.82-1-5.33-2.26l1.43-1.37M12 16.5L7.5 12H11V8h2v4h3.5L12 16.5z"/></svg></span> Installer<a class="headerlink" href="#installer" title="Permanent link">&para;</a></h3>
 <p>When you have modified your settings as you want or the default ones are just good you can run the INSTALLER.exe file.</p>
@@ -933,33 +1022,28 @@ You need to execute the app from a command prompt by calling commands.</p>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\EXRTools.exe&quot;</span>
 </code></pre></div>
-
 <ul>
 <li>Enter the command you want to use (see <a href="../features/">features</a>), for this quick example we are going to use <code>exr-resize</code></li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\EXRTools.exe&quot;</span> exr-resize
 </code></pre></div>
-
 <ul>
 <li>Get the path of the image you want to resize, and paste it after the command
  (as always with a space in between)</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\EXRTools.exe&quot;</span> exr-resize <span class="s2">&quot;L:\texture\randomTexture.exr&quot;</span>
 </code></pre></div>
-
 <ul>
 <li>Now just enter the resolution you want to resize to</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\EXRTools.exe&quot;</span> exr-resize <span class="s2">&quot;L:\texture\randomTexture.exr&quot;</span> <span class="m">1024</span>
 </code></pre></div>
-
 <ul>
 <li>You can press Enter as all the required arguments are given, but for this exemple we are going to add the option
 <code>--suffix</code>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;L:\apps\EXRTools.exe&quot;</span> exr-resize <span class="s2">&quot;L:\texture\randomTexture.exr&quot;</span> <span class="m">1024</span> --suffix<span class="o">=</span>_resize1024
 </code></pre></div>
-
 <ul>
 <li>Press enter and wait for the converter to finish</li>
 </ul>

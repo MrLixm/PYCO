@@ -210,6 +210,19 @@
 
       
         
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../licenses/eula/" class="md-tabs__link">
+          Licenses
+        </a>
+      
+    </li>
+  
+
+      
+        
       
         
       
@@ -809,6 +822,48 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Licenses
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Licenses" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Licenses
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../licenses/eula/" title="Eula" class="md-nav__link">
+      Eula
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item">
     <a href="../../../whatsnew/" title="What's new ?" class="md-nav__link">
       What's new ?
@@ -919,6 +974,7 @@
                 
                 <h1 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h1>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<p>Tested on Windows 10, some features might not work on other OS.</p>
 <p>Tested on Katana 3.6v2 and Katana 4.0v2 with Redshift and 3Delight.</p>
 <div class="admonition bug">
 <p>Special characters used in file path (such as whitespaces) may cause issues.</p>
@@ -948,7 +1004,7 @@
 <p><code>int</code>: Width in pixel of the UI at startup</p>
 </div>
 <input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">locked_paths</label><div class="tabbed-content">
-<p><code>list</code>: List of path that will appear locked to the user in the UI</p>
+<p><code>list</code>: List of paths that will appear locked to the user in the UI</p>
 </div>
 </div>
 <h2 id="treewidget"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h6v4H3V3m12 7h6v4h-6v-4m0 7h6v4h-6v-4m-2-4H7v5h6v2H5V9h2v2h6v2z"/></svg></span> TreeWidget<a class="headerlink" href="#treewidget" title="Permanent link">&para;</a></h2>
@@ -963,6 +1019,29 @@
 <p>Some render-engines support advanced tokens (such as <code>&lt;shapeName&gt;</code>) that could only be evaluated at render time.</p>
 <p>This means that for root item with such token the children file path are <strong>potential matches</strong></p>
 </div>
+<p>Icons for render-engine textures.=:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="children" src="../images/re_icons/retex_bake.png" /></td>
+<td>All the re-tex are baked for this item.</td>
+</tr>
+<tr>
+<td><img alt="children" src="../images/re_icons/retex_remove.png" /></td>
+<td>There is no re-tex baked for this item</td>
+</tr>
+<tr>
+<td><img alt="children" src="../images/re_icons/retex_warning.png" /></td>
+<td>Some re-tex has been baked for this item (root item with child item)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="right-click-menu"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 1.07C7.05 1.56 4 4.92 4 9h7m-7 6a8 8 0 008 8 8 8 0 008-8v-4H4m9-9.93V9h7c0-4.08-3.06-7.44-7-7.93z"/></svg></span> Right-click menu<a class="headerlink" href="#right-click-menu" title="Permanent link">&para;</a></h2>
 <p>This example is with Redshift:</p>
 <p><img align="left" alt="context menu" src="../images/context_menu.png" /> </p>
@@ -1053,7 +1132,7 @@ use <code>textures\\texture01.exr</code> in the search field.</p>
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2020 - 2020 Collod-Liam
+            Copyright &copy; 2020 - 2021 Collod-Liam
           </div>
         
         Made with
@@ -1105,7 +1184,7 @@ use <code>textures\\texture01.exr</code> in the search field.</p>
       <script>
         app = initialize({
           base: "../../..",
-          features: "-tabs",
+          features: "-tabs - search.suggest - search.highlight",
           search: Object.assign({
             worker: "../../../assets/javascripts/worker/search.7a2ea5ba.min.js"
           }, typeof search !== "undefined" && search)

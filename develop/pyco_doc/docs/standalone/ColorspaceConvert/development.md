@@ -37,3 +37,8 @@ Scipy cause problem when freezing, to fix:
 - Go to the package location: `venvColour\Lib\site-packages\scipy`
 - Create a new folder `/extra-dll`
 - Copy the content of `/.libs` in `/extra-dll`
+
+**Shared under CC BY-SA 4.0 license.**
+BY – Credit must be given to the creator
+SA – Adaptations must be shared under the same terms
+<https://creativecommons.org/licenses/by-sa/4.0/>

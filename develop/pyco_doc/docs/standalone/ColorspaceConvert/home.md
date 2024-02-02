@@ -17,15 +17,18 @@ The app only works with 2d images for now.
 
     * Performance can become very bad with ACES ODTs.
     * Running the app as administrator on Windows will disable drag & drop
+    * Converting tiff to png or even using png can cause errors.
+    * logging system is actually a joke so doesn't except much from it.
     
 ## :material-account-group: CONTRIBUTORS
 
-**Development made possible thaks to**
+**Development made possible thanks to**
 
 - <a href=https://www.colour-science.org/> ColorScience Package </a>
 - <a href=https://github.com/fredrikaverpil/oiio-python> Fredrik Averpil's and Sidney Guenther's work </a>
 - <a href=https://materialdesignicons.com> Material Design Icons </a>
 - <a href=https://sites.google.com/site/openimageio/home> OpenImage IO </a>
+- <a href=https://www.docstring.fr/> Thibault Houdon Formations </a>
 
 **Special Thanks to:**
 
@@ -41,16 +44,11 @@ The app only works with 2d images for now.
  <a href=https://www.ceridwenproductions.com/> Douglas Bischoff </a>,  
  <a href=https://chrisbrejon.com/> Chris Brejon </a>
  
-## :material-update: Upcoming Features
+## :material-update: What's next ?
 
-Some of these are simply ideas that might not never be realised.
+I find the app very basic for now and I suggested some new feature like .tx baking in the past. 
+But I run into the dilemna of improving the current application based on a wobbly code or re-writing a fresh new 
+application with solid foundations to build bigger things.Unfortunately i'm in 
+in a period with not a lot of time which make the choice difficult.
 
-!!! note ""
-
-    - .tx Output
-    - mipmapping for output support
-    - RGB single color-converter
-    - Demoisaicing RAW files
-    - Image primaries plotting on CIE Diagram
-    - Options to create a scaled version version of the output (4k to 2k for exemple)
-    - Precise manually the transferfunction/primaries/whitepoint instead of using the IDT
+Anyway doesn't except new update for this app, but maybe a new, bigger one in a year :sweat_smile:

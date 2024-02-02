@@ -1,8 +1,21 @@
 # :material-book-open-page-variant: GETTING STARTED
+
+**Think to also read the** 
+<a href=https://mrlixm.github.io/PYCO/standalone/ColorspaceConvert/features/> Features page <a/> 
+
+
 ## :material-arrow-down-bold-circle: Installation
 Pyco Colorspace can be downloaded here: <https://gum.co/pycocs>
 
 Choose the package to download depending on the OS you are on.
+
+You can then extract the zip you got and inside the application folder and open the .exe
+
+
+!!! info "ACES Workflow Reminder:"
+    Reminder that in an ACES workflow, only the color maps need to be converted. This means maps that hold color values
+    displayed in the render image. (a Normal map is not a color map but a scalar/data map).
+
 
 ## :material-numeric-1-box: Import files
 You can simply drag & drop any supported file(s) or even just a folder.
@@ -86,7 +99,7 @@ Read more about this here: <https://www.exr-io.com/openexr-data-compression/> .
 - **exr(dwaa/dwaab):** 0 means Max quality
   
 ### :material-numeric-3-box::material-numeric-6-box: Select your output location option.
-*Refer to the Functionalities page.*
+*Refer to the Features page.*
 
 ## :material-numeric-4-box: Start The Conversion
 Click on the green "play" button in the toolbar to start converting.

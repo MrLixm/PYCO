@@ -5,15 +5,18 @@ site_url: https://mrlixm.github.io/PYCO/
 site_author: Collod Liam
 site_description: >-
   Home of the documentation for PYCO applications. PYCO apps target a VFX-CGI public and help them create
-  and work faster. This go from the in-app python script to the standalone app.
+  and work faster. This go from the in-dcc python script to the standalone application.
 
 # Copyright
-copyright: Copyright &copy; 2020 - 2020 Collod-Liam
+copyright: Copyright &copy; 2020 - 2021 Collod-Liam
 
 
 theme:
   name: material
-  features: -tabs
+  features:
+    -tabs
+    - search.suggest
+    - search.highlight
   icon:
     logo: material/library
     repo: fontawesome/brands/git-alt
@@ -36,8 +39,32 @@ nav:
           - Getting started: standalone/ColorspaceConvert/startguide.md
           - Features : standalone/ColorspaceConvert/features.md
           - Development : standalone/ColorspaceConvert/development.md
+          - For Linux: standalone/ColorspaceConvert/linux.md
+      - Pointer's Gamut CLI:
+          - Home: standalone/PointerGamutCLI/home.md
+          - Getting started: standalone/PointerGamutCLI/startguide.md
+          - Features : standalone/PointerGamutCLI/features.md
+      - EXR Tools:
+          - Home: standalone/EXRTools/home.md
+          - Getting started: standalone/EXRTools/startguide.md
+          - Features: standalone/EXRTools/features.md
+          - Development : standalone/EXRTools/development.md
+
     - Maya:
         - Udim Select: maya/udimselect.md
+    - Katana:
+        - Texture Monitor:
+          - Home: katana/TextureMonitor/home.md
+          - Start Guide: katana/TextureMonitor/startguide.md
+          - Features: katana/TextureMonitor/features.md
+          - Development: katana/TextureMonitor/development.md
+        - Megascans Importer:
+          - Home: katana/msimporter/home.md
+          - Features: katana/msimporter/features.md
+    - Licenses:
+        - Eula: licenses/eula.md
+
+    - What's new ?: whatsnew.md
     - About: about.md
 
 extra:
@@ -67,6 +94,11 @@ markdown_extensions:
   - pymdownx.tabbed
   - toc:
       permalink: true
+  - attr_list
+
+google_analytics:
+  - UA-178298369-1
+  - auto
 
 plugins:
   - search
